@@ -31,6 +31,7 @@ function changeFullName(){
 }
 </script>
 
+
 <style scoped>
 .person {
     background-color: rgb(187, 190, 192);
