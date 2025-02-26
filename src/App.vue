@@ -1,24 +1,28 @@
 <template>
     <div class="app">
-        <h1>Hello Vue 3!</h1>
-        <Person/>
+        <h2>Hello Vue 3!</h2>
+        <!-- 导航区 -->
+        <div class="navigate">
+            <!-- 可添加active-class -->
+            <RouterLink to="/home">首页</RouterLink>
+            <RouterLink to="/news">新闻</RouterLink>
+            <RouterLink to="/about">关于</RouterLink>
+        </div>
+        <!-- 展示区 -->
+        <div class="main-content">
+            <RouterView></RouterView>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
-import Person from './components/Person.vue';
 export default {
     name: 'App',//组件名
-    components:{Person},
-    setup() {
-        return {
-            msg: 'Hello Vue 3!'
-        }
-    }
 }
 </script>
-<script lang="ts" setup>
 
+<script lang="ts" setup>
+import { RouterView,RouterLink } from 'vue-router';
 
 </script>
 
